@@ -1,0 +1,104 @@
+// acceder a postgres
+psql -U user_postgres
+// crear base de datos
+CREATE DATABASE BM;
+//Usar base de datos
+\c BM;
+//Crear tabla
+create table certificado_operador (
+  id BIGSERIAL PRIMARY KEY,
+  nombre_comun VARCHAR(40),
+  certificado VARCHAR(4096)
+ );
+
+/insertar datos
+INSERT INTO usuarios (nombre_comun, certificado) VALUES ('usuario00', '-----BEGIN PUBLIC KEY-----
+                                                                       MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt0NZ8GvEdkI4F8VMQGyu
+                                                                       +u09T7D0NdYHUNGN4XacxW0D+wiZGnSANHikC9Tn9US9JP4gya9D26njTNE16s+b
+                                                                       HpVvz5DYONqgIS9zI5xbyEgqeRTWGBd6qswR8qzWdTtloJVBgbmGWTUpQDPPuq2v
+                                                                       8uMcYltaUoCdgLT/w5G2FZ+de6jwfVroH9TbKEpxKzD9Uy2rBgVQydwrWBMJWNnI
+                                                                       V5TtDb2LJbPF3RhVyjjqlSzPcvzHxubZwD978L63DwFDDhaJoOA1FMU7V7KrgEy8
+                                                                       qe365jAqp5QgRAMeEIk1UHMrrxvpQHJTY5JPqHXUcdHKoE2xG2TxHE95+73mX07h
+                                                                       HQIDAQAB
+                                                                       -----END PUBLIC KEY-----'),
+('usuario01', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3YLICenjQLUctDFrFGTR
+               8DdT0GnoWz0f+nU3YcfaFkp+MLSzIby0yLHZZF4uXE2xW0vJQdT9G1s9hlrBpJ8N
+               Hsh10Fqt28cN0DR4bYmKyvy/A6AGtI/AeaEDDmZxbsiTJUTCjpfIfuYiY8O7Uzw6
+               TBCpjoZuweHjvA1PPLUY2tb+81stTf6AhQx43wQQnWrgSuwfS7d2132BaCtXdN6w
+               skojaoUsjTKnuxdQZM4lT949LZhSI48p1v2jYH5x9BELibG+zrKSmaE8/h3yO9Uy
+               7xJN838vyixY/mtCtV/tFXlfLsk3C81Rbrb5IuZK3KlIBfNqc0jXFFZzvAXGWbgW
+               /QIDAQAB
+               -----END PUBLIC KEY-----'),
+('usuario02', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+lbRCR4N35qLfoPMxZKw
+               Hwo7ta+yTknfJPqpovzUDGgli1g6+vDrm1230ZVm8hd7ECEnsyJ9ctdyt1khl7Ze
+               bgzDHLxfmdJgyE88H6XDKlvna0yR9xZN1NSg7Km+rRG4aWAtqXm4znT8jlrH/fJu
+               F8GT4FNKRWpCuh7vtlesQ0d9nTlTbwChnzRmuNn8s2r6dMjqRm6XaK8xS/1hlXUW
+               KoY894w7Bmk5ICr0QvLpapiRx2q1+9oaoT36AFK389tscsXo7qrpZJ8a/mSShbW9
+               boyDxzu8ZxR3W3G+AsHwuO/xmxIyKsti3YBS9/27S9Bz0Os7rSg08C7PurK/sBiE
+               +QIDAQAB
+               -----END PUBLIC KEY-----'),
+('usuario03', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAktuKdVftgb2SlPZUPepp
+               Y8zGSyGw6tc2nbGOHHdwu6EEuqB+LUXp/DZ1dH7Pc2iqSuba+y4xv//NoACMJvp/
+               qRxhtH03WnYc1CKtrJNMSozSLwlt7iOP5J0I7RxTKec8W80S9l+nrFUGzQ6WiSCw
+               F2zj1fYce5chglO29Sfo3t4pyVXr1f/WitmgqHay06eCA9oLKmC+e3dJL9kSp2vr
+               UBRDcwLDWex6sDsF2LSDWHw/FOhEs47ALZ5odPoGwK54rV1jZg3tHLZh6iEhGc5Z
+               9Rw1KgxeEjFKIfSsY+YYPKxWx10sZXskqHhAM4VgIl3zj3ot7YmuMY49Qe0aJPQu
+               FQIDAQAB
+               -----END PUBLIC KEY-----'),
+('usuario04', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAprj5D0hhH2dY+6j6qaqP
+               9VQbeRdwBv+d1GH97qUC/Y+xVpVI8upD1BGoaFV3iKZvbNTgwIwGLPb3NZpF+FsQ
+               xPUxBJi2vhP2F5ZZpj7te8xb2x5WB1OtRp4wYpnljvHwoW/lHlT1hG7yilqCE6FO
+               PvoqQDAvFDbfx4PXCQL6j3Ngv5umccJDmRa87NkXIeFoTF611TrulyEDNcIbutKi
+               xwjlaYNtbAQgzyoAjaQvDa7rieLSHVCUUMY5yHBy6sGQIR9GB+4bcfp9bCUfQkq8
+               3/bIu0GiW5bmijj5z1jHReiDKb8A6GK0ekWfaFmlmMw2RYf3oPHIpsYpHoWAiSWy
+               kwIDAQAB
+               -----END PUBLIC KEY-----'),
+('usuario05', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAytk9JdPn8oKkRNAoGu3a
+               UsDNDdiawrAxi2AzIWV5pkdyeK9JdASJNdyLRgqMm0GCOD3s9YUjwDIO/I3oSe42
+               7Q4vYYITFskOCIHjR9KQVu3EfZ+DzuM8a8rItwjjRyzhl3bnDByES2nNt1LqJWuY
+               +McPgkacgz0oQ7tAcIMFCpS+mVkpS4HXRnkOZ7PPxmKg3huG1B/TxSo1+hACzVtA
+               LfS+v+qyxzO4/NYCWw6Tg691vCvuxSMeqakvuvsxNehTlEnyMc8Q+wqtLGF2rB3w
+               CLTvEqimWKA0GnU/u+mZmrGuIUTR9mMDrv6dwyqH2xkSVbn612NQJ9gKYcWCZHPH
+               jwIDAQAB
+               -----END PUBLIC KEY-----'),
+('usuario06', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvJ1dCa3ZRuqotDeRtCqt
+               YALxOkBqFdvAWNpJiaEp2PqRnOPHlzbVw28cZZRPITqeI0Vyoew4/EnAOclnntdI
+               HSaYpp1mk+zstZtwU0UZQXuUdX9TCakdrjIhnP/eJunKp/sIVBagkReaaRjSKTtk
+               qvCbCyxYSliBQ+3eZSoecS7uwuUaah5qmRhu1IfqNv+6fulIOQuo2S7MMOY17Zpy
+               q1Rs3n8o7oIly8AI8rwVhkOtwrupviKMrNOyV6d3RdaSz7x4s2UwFwJWrss6qRrM
+               24Oel1knHbIw0WVFVkAh96FBZ2Bkkex8cqgTo6JGuXF1mCT5ezXJIaO2U1MyVrjH
+               awIDAQAB
+               -----END PUBLIC KEY-----'),
+('usuario07', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzjPaNOY3dkwzoWCDdBkJ
+               uebTZgYEbKzAQEjQr816SUO3nm7lvMKPC66oUPjELZ++ZAX4vIP6Cuf2og87vSo/
+               2bue7xw5VoyGCV9WtYY95Fzo61PTPqFJjgy/5YkU+j9IO3+BsRgF9KmROnGvoPBv
+               qjmpf5IcLu8o9uFTNfW8h+JxFUvXmgiEHCkII/x1A5URt4Thl5heUjcjnjlteco4
+               rYsf09MTniIk4mJfw2Z8CvzputURwazyYGhCPMdmKnlO8P4gMJr4lirFEHK5oVQp
+               o8zWexlmgJV2CbTG1LXyrmN39WN6AxFbtOIEVlt+3RB07s8x8Vx/7BgYa13KSJ1d
+               bQIDAQAB
+               -----END PUBLIC KEY-----'),
+('usuario08', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmp3HWMPu8qvjx89ccdPJ
+               5Y1Da6NzRSLfSEzmk+XSW3SRU1v9IhIkfGFBRh7HkUursAy153Z0hPjqS+OjSRXi
+               EnhhQFf59KtS4LBBF2rNsU/3C4fB6F5k0MUtMSh4K8W8O+AhZ1QEQpn36jVCFSdZ
+               oLoGXgbxWeNv6dvsSgO+YuGdWajn2qZ/8mZ9kvOL+D+f+NP8vVpXCR3Ld/4MLYNy
+               uhwDLNRFVgqW7Ud6dSS33yil3cDG2KQJug7go7toecH6mGuieUN71QJmBCBLHjnW
+               fKB8MPD74eUUTvRVDm18tBbqZ7ijt5ebOp/CJKot3Vy6x3euvtw9/jAlGuu1cRXE
+               8QIDAQAB
+               -----END PUBLIC KEY-----'),
+('usuario09', '-----BEGIN PUBLIC KEY-----
+               MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvULeWuPQaaXaB9YyQWPi
+               qFtHbNTx6Wbpswa6uC0fpnAJQXZrXA422cJ6/CcUy19Tu1FNeqjjZfOOfAh97TKk
+               yGCmvuBydgB9e7dinSWfVqAlM3OltnJ/vQBUYO57loXrkLbkiFIk0dNdRSNHlGU2
+               cUzdtuQ68kmxiaHjrkOYwDgmtMoo4vVfaUEM2gWsyOsxBOFJZFeaT8IeODVv/UNA
+               KMb4SiW0XJcwKNlj/vrDCZilf1SDB2iAbzbS607DxebW03AMLGsGTPOMDxyuhRVP
+               AMF1ko4i+a8p1tjtGsY7RTZNkTPMNZc96KBW6P84uAAYJlAqANPu5ntwf/oy+BuU
+               AQIDAQAB
+               -----END PUBLIC KEY-----');
